@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RO-ROYAL - Le Royaume de l'Élégance</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;500;600;700;800;900&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+<nav class="navbar" id="navbar">
+        <div class="navbar-logo" onclick="scrollToTop()">
+  <div class="navbar-logo" onclick="scrollToTop()">
+        <span>RO-ROYAL</span>
+  </div>
+        </div>
+        
+        <ul class="navbar-menu">
+            <li><a onclick="scrollToSection('tissus')">TISSUS</a></li>
+            <li><a onclick="scrollToSection('outils')">OUTILS</a></li>
+            <li><a onclick="scrollToSection('salon')">SALON</a></li>
+            <li><a onclick="scrollToSection('philosophie')">À PROPOS</a></li>
+            <li><a onclick="scrollToSection('contact')">CONTACT</a></li>
+        </ul>
+        <div class="mobile-menu-icon" onclick="toggleMobileMenu()" style="color: var(--gold-primary); cursor: pointer;">
+    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+    </svg>
+</div>
+  </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-background">
+            <img src="/assets/logo.png" alt="RO-ROYAL Hero">
+             <div class="hero-overlay" style="background-image: url('./background.PNG'); background-repeat: no-repeat; background-position:cover; background-size:cover;"></div> 
+        </div>
+        
+        <div class="hero-content">
+            
+            <h1 class="hero-title">RO-ROYAL</h1>
+                <svg class="section-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m7.848 8.25 1.536.887M7.848 8.25a3 3 0 1 1-5.196-3 3 3 0 0 1 5.196 3Zm1.536.887a2.165 2.165 0 0 1 1.083 1.839c.005.351.054.695.14 1.024M9.384 9.137l2.077 1.199M7.848 15.75l1.536-.887m-1.536.887a3 3 0 1 1-5.196 3 3 3 0 0 1 5.196-3Zm1.536-.887a2.165 2.165 0 0 0 1.083-1.838c.005-.352.054-.695.14-1.025m-1.223 2.863 2.077-1.199m0-3.328a4.323 4.323 0 0 1 2.068-1.379l5.325-1.628a4.5 4.5 0 0 1 2.48-.044l.803.215-7.794 4.5m-2.882-1.664A4.33 4.33 0 0 0 10.607 12m3.736 0 7.794 4.5-.802.215a4.5 4.5 0 0 1-2.48-.043l-5.326-1.629a4.324 4.324 0 0 1-2.068-1.379M14.343 12l-2.882 1.664" />
+                </svg>
+            <h2 class="hero-slogan" style="width: 700px;">Le Royaume de l'Élégance</h2>
+            
+            <p class="hero-subtitle">
+                Où l'art du tissu rencontre l'excellence du style
+            </p>
+            
+            <div class="hero-buttons">
+                <button class="btn-primary" onclick="scrollToSection('tissus')">
+                    DÉCOUVREZ NOS TISSUS
+                </button>
+                <button class="btn-secondary" onclick="scrollToSection('salon')">
+                    EXPLOREZ NOS SERVICES
+                </button>
+            </div>
+            
+            <div class="scroll-indicator">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- Nos Tissus Précieux Section -->
+    <section id="tissus" class="section section-light">
+        <div class="container">
+            <div class="section-header fade-in">
+                <svg class="section-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456ZM16.894 20.567 16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394-1.183.394a2.25 2.25 0 0 0-1.423 1.423Z" />
+                </svg>
+                <h2 class="section-title light">Nos Tissus Précieux</h2>
+                <div class="section-line"></div>
+            </div>
+            
+            <div class="grid-3">
+                <div class="fabric-card fade-in">
+                    <div class="fabric-image">
+                        <img src="./assets/velours.png" alt="Velours Ébène">
+                        <div class="fabric-overlay1"></div>
+                    </div>
+                    <h3 class="fabric-name">Velours Ébène</h3>
+                    <p class="fabric-description">Velours d'une profondeur exquise</p>
+                </div>
+                
+                <div class="fabric-card fade-in">
+                    <div class="fabric-image">
+                        <img src="./assets/velour2.png" alt="Soie Dorée">
+                        <div class="fabric-overlay2"></div>
+                    </div>
+                    <h3 class="fabric-name">Soie Royale</h3>
+                    <p class="fabric-description">Éclat soyeux et raffinement</p>
+                </div>
+                
+                <div class="fabric-card fade-in">
+                    <div class="fabric-image">
+                        <img src="./assets/brocart.png"alt="Brocart Élégant">
+                        <div class="fabric-overlay3"></div>
+                    </div>
+                    <h3 class="fabric-name">Brocart Élégant</h3>
+                    <p class="fabric-description">Motifs tissés d'exception</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- Outils & Art de la Couture Section -->
+    <section id="outils" class="section section-dark">
+        <div class="container">
+            <div class="section-header fade-in">
+                <svg class="section-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m7.848 8.25 1.536.887M7.848 8.25a3 3 0 1 1-5.196-3 3 3 0 0 1 5.196 3Zm1.536.887a2.165 2.165 0 0 1 1.083 1.839c.005.351.054.695.14 1.024M9.384 9.137l2.077 1.199M7.848 15.75l1.536-.887m-1.536.887a3 3 0 1 1-5.196 3 3 3 0 0 1 5.196-3Zm1.536-.887a2.165 2.165 0 0 0 1.083-1.838c.005-.352.054-.695.14-1.025m-1.223 2.863 2.077-1.199m0-3.328a4.323 4.323 0 0 1 2.068-1.379l5.325-1.628a4.5 4.5 0 0 1 2.48-.044l.803.215-7.794 4.5m-2.882-1.664A4.33 4.33 0 0 0 10.607 12m3.736 0 7.794 4.5-.802.215a4.5 4.5 0 0 1-2.48-.043l-5.326-1.629a4.324 4.324 0 0 1-2.068-1.379M14.343 12l-2.882 1.664" />
+                </svg>
+                <h2 class="section-title dark">Outils & Art de la Couture</h2>
+                <div class="section-line"></div>
+                <p class="section-subtitle" style="color: #ccc;">Des instruments de précision pour les artisans de l'élégance</p>
+            </div>
+            
+            <div class="grid-4">
+                <div class="tool-card fade-in">
+                    <div class="tool-overlay1"></div>
+                </div>
+                <div class="tool-card fade-in">
+                    <div class="tool-overlay2"></div>
+                </div>
+                <div class="tool-card fade-in">
+                    <div class="tool-overlay3"></div>
+                </div>
+                <div class="tool-card fade-in">
+                    <div class="tool-overlay4"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- L'Espace Barbershop & Salon Section -->
+    <section id="salon" class="section section-light">
+        <div class="container">
+            <div class="section-header fade-in">
+               <svg class="section-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456ZM16.894 20.567 16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394-1.183.394a2.25 2.25 0 0 0-1.423 1.423Z" />
+                </svg>
+                <h2 class="section-title light">Voyage Dans le Royaume</h2>
+                <div class="section-line"></div>
+                <p class="section-subtitle">Une expérience exclusive de style et de raffinement</p>
+            </div>
+            
+            <div class="salon-grid fade-in">
+                <div class="salon-imageH">
+                    <img src="./assets/stylehomme.png" alt="Intérieur Barbershop">
+                    <div class="salon-caption">
+                        <h3>STYLE HOMME</h3>
+                        <p>Un style à la hauteur de votre ambition.</p>
+                    </div>
+                </div>
+                
+                <div class="salon-imageF">
+                    <img src="./assets/style femme.png"alt="Chaise de Luxe">
+                    <div class="salon-caption">
+                        <h3>STYLE FEMME</h3>
+                        <p>Affirmez votre règne. Révélez votre beauté</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="grid-3 fade-in">
+                <div class="service-card">
+                    <h4 class="service-title">Coupe Souveraine</h4>
+                    <p class="service-description">L'art du sur-mesure : une architecture pensée pour révéler votre prestance.</p>
+                </div>
+                <div class="service-card">
+                    <h4 class="service-title">Finition d'Héritage</h4>
+                    <p class="service-description">Le montage traditionnel, réalisé main avec une précision chirurgicale.</p>
+                </div>
+                <div class="service-card">
+                    <h4 class="service-title">Étoffes d'Exception</h4>
+                    <p class="service-description">Sélection de matières nobles (laines, cachemires) pour une tenue et un toucher impériaux.</p>
+                </div>
+            </div>   
+            <section class="vue">
+                <div class="apercu-pr">
+                <div class="image-cont">
+                    <img src="./image-apercu/WhatsApp Image 2026-04-25 at 11.48.42 (1).jpeg" width="300px"   alt="Intérieur Barbershop">
+                </div>
+                <div class="image-cont">
+                    <img src="./image-apercu/WhatsApp Image 2026-04-25 at 11.48.42 (4).jpeg" width="300px"  alt="Chaise de Luxe">
+                </div>      
+             </div> 
+                <div class="apercu" id="disparait">        
+                <div class="image-cont">
+                    <img src="./image-apercu/WhatsApp Image 2026-04-25 at 11.48.42 (2).jpeg" width="420px"  alt="Chaise de Luxe">
+                </div>
+                <div class="image-cont dernier">
+                    <img src="./image-apercu/WhatsApp Image 2026-04-25 at 11.48.42.jpeg" width="430px" alt="Chaise de Luxe">
+                </div>
+            </div>
+            <div class="video">
+     <video controls loop  width="600px">
+    <source src="./image-apercu/vidi.mp4" type="video/mp4"/>
+      </video>
+            </div>
+    </section>
+    </div>
+    </section>
+
+    <div class="divider"></div>
+ 
+    <!-- Notre Philosophie Section -->
+    <section id="philosophie" class="section section-dark">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title dark">Notre Philosophie</h2>
+                <div class="section-line"></div>
+            </div>
+            
+            <div class="philosophy-grid fade-in">
+                <div class="philosophy-image">
+                    <img src="./assets/philosophie.png" alt="Intérieur RO-ROYAL">
+                </div>
+                
+                <div class="philosophy-content">
+                    <h3 class="philosophy-title">Le Royaume de l'Élégance</h3>
+                    
+                    <p class="philosophy-text">
+                        Chez RO-ROYAL, nous croyons que l'élégance est un art qui transcende les frontières. 
+                        Notre vision unique marie la maîtrise textile ancestrale avec l'art du style contemporain.
+                    </p>
+                    
+                    <p class="philosophy-text">
+                        Chaque tissu que nous proposons, chaque service que nous offrons, est une célébration 
+                        du raffinement et de l'excellence. Notre espace réunit deux mondes - celui des étoffes 
+                        précieuses et celui du grooming haut de gamme - pour créer une expérience incomparable.
+                    </p>
+                    
+                    <p class="philosophy-text">
+                        Bienvenue dans notre royaume, où chaque détail compte, où l'artisanat rencontre le luxe, 
+                        et où vous êtes traité comme la royauté que vous êtes.
+                    </p>
+                    
+                    <div class="philosophy-divider">
+                        <div class="line"></div>
+                <svg class="section-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m7.848 8.25 1.536.887M7.848 8.25a3 3 0 1 1-5.196-3 3 3 0 0 1 5.196 3Zm1.536.887a2.165 2.165 0 0 1 1.083 1.839c.005.351.054.695.14 1.024M9.384 9.137l2.077 1.199M7.848 15.75l1.536-.887m-1.536.887a3 3 0 1 1-5.196 3 3 3 0 0 1 5.196-3Zm1.536-.887a2.165 2.165 0 0 0 1.083-1.838c.005-.352.054-.695.14-1.025m-1.223 2.863 2.077-1.199m0-3.328a4.323 4.323 0 0 1 2.068-1.379l5.325-1.628a4.5 4.5 0 0 1 2.48-.044l.803.215-7.794 4.5m-2.882-1.664A4.33 4.33 0 0 0 10.607 12m3.736 0 7.794 4.5-.802.215a4.5 4.5 0 0 1-2.48-.043l-5.326-1.629a4.324 4.324 0 0 1-2.068-1.379M14.343 12l-2.882 1.664" />
+                </svg>
+                        <div class="line"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- Contact & Booking Section -->
+    <section id="contact" class="section section-light">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title light">Contactez-Nous</h2>
+                <div class="section-line"></div>
+                <p class="section-subtitle">Venez découvrir le royaume de l'élégance</p>
+            </div>
+            
+            <div class="contact-grid fade-in">
+                <div class="contact-card">
+                    <svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+                    </svg>
+                    <h3 class="contact-title">Adresse</h3>
+                    <p class="contact-info"> <br>lomé-Togo</p>
+                </div>
+                
+                <div class="contact-card">
+                    <svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
+                    </svg>
+                    <h3 class="contact-title">Téléphone</h3>
+                    <p class="contact-info">99478841 / 99684222<br>mardi-Samedi: 7h-20h</p>
+                </div>
+                
+                <div class="contact-card">
+<svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+    <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.59-1.01V14a6.9 6.9 0 0 1-1.83 4.69c-1.32 1.4-3.3 2.13-5.2 2.05a6.48 6.48 0 0 1-4.24-1.78A6.68 6.68 0 0 1 3.5 14.1c.01-1.89.84-3.79 2.3-5a6.45 6.45 0 0 1 5.3-1.35v4.13a2.46 2.46 0 0 0-1.88.75 2.58 2.58 0 0 0-.61 2.45c.16.8.69 1.5 1.4 1.86.7.36 1.56.36 2.26.01.71-.35 1.25-1.04 1.43-1.82.04-.15.06-.31.06-.47V0h.065Z"/>
+</svg>
+                    <h3 class="contact-title">Tiktok</h3>
+                    <p class="contact-info">Ro-royal</p>
+                </div>
+            </div>
+            
+            <div class="contact-cta fade-in">
+               <a href="tel:+228 99478841"> <button class="btn-secondary">
+                    PRENDRE RENDEZ-VOUS
+                </button></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <!-- <svg class="footer-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+        </svg> -->
+        <h3 class="footer-title">RO-ROYAL</h3>
+               <svg class="section-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m7.848 8.25 1.536.887M7.848 8.25a3 3 0 1 1-5.196-3 3 3 0 0 1 5.196 3Zm1.536.887a2.165 2.165 0 0 1 1.083 1.839c.005.351.054.695.14 1.024M9.384 9.137l2.077 1.199M7.848 15.75l1.536-.887m-1.536.887a3 3 0 1 1-5.196 3 3 3 0 0 1 5.196-3Zm1.536-.887a2.165 2.165 0 0 0 1.083-1.838c.005-.352.054-.695.14-1.025m-1.223 2.863 2.077-1.199m0-3.328a4.323 4.323 0 0 1 2.068-1.379l5.325-1.628a4.5 4.5 0 0 1 2.48-.044l.803.215-7.794 4.5m-2.882-1.664A4.33 4.33 0 0 0 10.607 12m3.736 0 7.794 4.5-.802.215a4.5 4.5 0 0 1-2.48-.043l-5.326-1.629a4.324 4.324 0 0 1-2.068-1.379M14.343 12l-2.882 1.664" />
+                </svg>
+        <p class="footer-slogan">Le Royaume de l'Élégance</p>
+        <div class="footer-line"></div>
+        <p class="footer-copyright">© 2026 RO-ROYAL. Tous droits réservés.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

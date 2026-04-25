@@ -1,0 +1,922 @@
+/* RO-ROYAL - Le Royaume de l'Élégance - Style CSS */
+
+/* ===== RESET & BASE ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ html {
+    scroll-behavior: smooth;
+} 
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+/* ===== VARIABLES CSS ===== */
+:root {
+    --gold-primary: #D4AF37;
+    --gold-accent: #C5A021;
+    --charcoal-black: #1A1A1A;
+    --crisp-white: #FFFFFF;
+    --burgundy: #800020;
+    --forest-green: #013220;
+}
+
+/* ===== NAVIGATION ===== */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 1rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+    background: transparent;
+}
+
+.navbar.scrolled {
+    background: rgba(26, 26, 26, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.navbar-logo svg {
+    width: 32px;
+    height: 32px;
+    color: var(--gold-primary);
+}
+
+.navbar-logo span {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    letter-spacing: 0.1em;
+    color: var(--gold-primary);
+    transition: color 0.3s ease;
+}
+
+.navbar-menu {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.navbar-menu li {
+    cursor: pointer;
+}
+
+.navbar-menu a {
+    text-decoration: none;
+    color: var(--crisp-white);
+    font-size: 0.9rem;
+    letter-spacing: 0.1em;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.navbar-menu a:hover {
+    color: var(--gold-primary);
+    transform: scale(1.05);
+}
+
+/* ===== HERO SECTION ===== */
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hero-background {
+    position:absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.hero-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    /* background: url('./assets/logo.png');  */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    padding: 0 2rem;
+    animation: fadeInUp 1s ease;
+}
+
+.hero-icon {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 1rem;
+    color: var(--gold-primary);
+    animation: fadeIn 1s ease;
+}
+
+.hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 5rem;
+    font-weight: 700;
+    color: var(--gold-primary);
+    margin-bottom: 1rem;
+    animation: fadeInUp 1s ease 0.2s both;
+}
+
+.hero-slogan {
+    font-family: 'Great Vibes', cursive;
+    font-size: 4.5rem;
+    background: linear-gradient(135deg, #D4AF37 0%, #C5A021 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 2rem;
+    animation: fadeInUp 1s ease 0.4s both;
+    height: auto;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    color: var(--crisp-white);
+    margin-bottom: 3rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    animation: fadeInUp 1s ease 0.6s both;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    animation: fadeInUp 1s ease 0.8s both;
+}
+
+.btn-primary {
+    padding: 1rem 2rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    border: 2px solid var(--gold-primary);
+    background: transparent;
+    color: var(--crisp-white);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3);
+}
+
+.btn-secondary {
+    padding: 1rem 2rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    border: none;
+    background: var(--gold-primary);
+    color: var(--charcoal-black);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3);
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: bounce 2s infinite;
+}
+
+.scroll-indicator svg {
+    width: 32px;
+    height: 32px;
+    color: var(--gold-primary);
+}
+
+/* ===== DIVIDER ===== */
+.divider {
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--gold-primary), transparent);
+}
+
+/* ===== SECTIONS ===== */
+.section {
+    padding: 6rem 2rem;
+}
+
+.section-dark {
+    background: var(--charcoal-black);
+}
+
+.section-light {
+    background: var(--crisp-white);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section-icon {
+    width: 48px;
+    height: 48px;
+    margin: 0 auto 1rem;
+    color: var(--gold-primary);
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.section-title.dark {
+    color: var(--gold-primary);
+}
+
+.section-title.light {
+    color: var(--charcoal-black);
+}
+
+.section-line {
+    width: 96px;
+    height: 4px;
+    background: var(--gold-primary);
+    margin: 0 auto;
+}
+
+.section-subtitle {
+    margin-top: 1.5rem;
+    font-size: 1.1rem;
+    color: #888;
+}
+
+/* ===== GRID LAYOUTS ===== */
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+}
+
+.grid-4 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+/* ===== FABRIC CARDS ===== */
+.fabric-card {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.fabric-card:hover {
+    transform: translateY(-10px);
+}
+
+.fabric-image {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.fabric-card:hover .fabric-image {
+    border-color: var(--gold-primary);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.fabric-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    display: block;
+}
+
+.fabric-card:hover .fabric-image img {
+    transform: scale(1.1);
+}
+
+.fabric-overlay1 {
+    position: absolute;
+    inset: 0;
+    background-image: url('./assets/velours.png');
+    background-repeat: no-repeat;
+
+}
+.fabric-overlay2 {
+    position: absolute;
+    inset: 0;
+    background-image: url('./assets/velour2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.fabric-overlay3 {
+    position: absolute;
+    inset: 0;
+    background-image: url('./assets/brocart.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.fabric-card:hover .fabric-overlay {
+    opacity: 1;
+}
+
+.fabric-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    color: var(--charcoal-black);
+}
+
+.fabric-description {
+    text-align: center;
+    color: #666;
+    letter-spacing: 0.05em;
+}
+
+/* ===== TOOL CARDS ===== */
+.tool-card {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    transition: all 0.3s ease;
+}
+
+.tool-card:hover {
+    border-color: var(--gold-primary);
+    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.2);
+}
+
+.tool-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    display: block;
+}
+
+.tool-card:hover img {
+    transform: scale(1.1);
+}
+
+.tool-overlay1 {
+    position: absolute;
+    inset: 0;
+    background-image: url('https://images.unsplash.com/photo-1536867520774-5b4f2628a69b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzZXdpbmclMjBzY2lzc29ycyUyMHRocmVhZHxlbnwxfHx8fDE3NzA0ODc0MDF8MA&ixlib=rb-4.1.0&q=80&w=1080');
+    background-repeat: no-repeat;
+     background-position: cover;
+     background-size: cover;
+}
+.tool-overlay2 {
+    position: absolute;
+    inset: 0;
+    background-image: url('https://images.unsplash.com/photo-1767839507898-9a8624bdd8b0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlbGVnYW50JTIwdGV4dGlsZSUyMGZhYnJpYyUyMHBhdHRlcm58ZW58MXx8fHwxNzcwNDg3Mzk4fDA&ixlib=rb-4.1.0&q=80&w=1080');
+    background-repeat: no-repeat;
+    background-position: cover;
+    background-size: cover;
+}
+.tool-overlay3 {
+    position: absolute;
+    inset: 0;
+    background-image: url('./assets/cisea.PNG');
+    background-repeat: no-repeat;
+     background-position: center;
+     background-size: cover;
+}
+.tool-overlay4 {
+    position: absolute;
+    inset: 0;
+    background-image: url('./assets/manchette.PNG');
+    background-repeat: no-repeat;
+     background-position: center;
+    background-size: cover;
+}
+
+.tool-card:hover .tool-overlay {
+    opacity: 1;
+}
+
+/* ===== SALON SECTION ===== */
+.salon-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.salon-imageH {
+    position: relative;
+    overflow: hidden;
+    background-image: url('./assets/stylehomme.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.salon-imageF {
+    position: relative;
+    overflow: hidden;
+    background-image: url('./assets/style\ femme.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.salon-image:hover {
+    border-color: var(--gold-primary);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.salon-image img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    display: block;
+}
+
+.salon-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    padding: 2rem;
+}
+
+.salon-caption h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--gold-primary);
+    margin-bottom: 0.5rem;
+}
+
+.salon-caption p {
+    color: var(--crisp-white);
+}
+
+/* ===== SERVICE CARDS ===== */
+.service-card {
+    text-align: center;
+    padding: 2rem;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    transition: all 0.3s ease;
+}
+
+.service-card:hover {
+    border-color: var(--gold-primary);
+    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.2);
+}
+
+.service-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--charcoal-black);
+    margin-bottom: 1rem;
+}
+
+.service-description {
+    color: #666;
+}
+.image-cont>img{
+opacity: 1 !important; /* Force l'opacité à 100% */
+    filter: none !important; /* Désactive tous les filtres (luminosité, flou, etc.) */
+    visibility: visible !important; /* Force la visibilité */
+    transform: none !important;
+    padding-top: 3rem;
+    border-radius: 35px;
+}
+.apercu{
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin: 0 auto;
+    border-radius: 10px;
+}
+.apercu-pr{
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin: 0 auto;
+    padding-left: 70px;
+    border-radius: 10px;
+
+}
+video{
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+/* ===== PHILOSOPHY SECTION ===== */
+.philosophy-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.philosophy-image img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border: 2px solid rgba(212, 175, 55, 0.3);
+    display: block;
+}
+
+.philosophy-image{
+    background-image: url('./assets/philosophie.png');
+    background-position: cover;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.philosophy-content {
+    color: var(--crisp-white);
+}
+
+.philosophy-title {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3rem;
+    background: linear-gradient(135deg, #D4AF37 0%, #C5A021 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 1.5rem;
+}
+
+.philosophy-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    color: #ccc;
+}
+
+.philosophy-divider {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.philosophy-divider .line {
+    width: 64px;
+    height: 1px;
+    background: var(--gold-primary);
+}
+
+.philosophy-divider svg {
+    width: 32px;
+    height: 32px;
+    color: var(--gold-primary);
+}
+
+/* ===== CONTACT SECTION ===== */
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.contact-card {
+    text-align: center;
+    padding: 2rem;
+    border: 2px solid rgba(212, 175, 55, 0.3);
+    transition: all 0.3s ease;
+}
+
+.contact-card:hover {
+    border-color: var(--gold-primary);
+    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.2);
+}
+
+.contact-icon {
+    width: 32px;
+    height: 32px;
+    margin: 0 auto 1rem;
+    color: var(--gold-primary);
+}
+
+.contact-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--charcoal-black);
+    margin-bottom: 1rem;
+}
+
+.contact-info {
+    color: #666;
+}
+
+.contact-cta {
+    text-align: center;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    background: var(--charcoal-black);
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.footer-icon {
+    width: 48px;
+    height: 48px;
+    margin: 0 auto 1rem;
+    color: var(--gold-primary);
+}
+
+.footer-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--gold-primary);
+    margin-bottom: 0.5rem;
+}
+
+.footer-slogan {
+    font-family: 'Great Vibes', cursive;
+    font-size: 1.8rem;
+    background: linear-gradient(135deg, #D4AF37 0%, #C5A021 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 1.5rem;
+}
+
+.footer-line {
+    width: 128px;
+    height: 1px;
+    background: var(--gold-primary);
+    margin: 0 auto 1.5rem;
+}
+
+.footer-copyright {
+    color: #888;
+    font-size: 0.9rem;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    50% {
+        transform: translateX(-50%) translateY(-10px);
+    }
+}
+
+/* Scroll animations */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+    .philosophy-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .salon-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 1rem 1.5rem;
+    }
+    
+    .navbar-menu {
+        display: none;
+    }
+    
+    .hero-title {
+        font-size: 3rem;
+    }
+    
+    .hero-slogan {
+        font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .section {
+        padding: 4rem 1.5rem;
+    }
+    
+    .section-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .grid-3,
+    .grid-4 {
+        grid-template-columns: 1fr;
+    }
+    
+    .salon-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .philosophy-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .philosophy-title {
+        font-size: 2rem;
+    }
+    
+    .philosophy-text {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-slogan {
+        font-size: 1.8rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .fabric-image img,
+    .salon-image img {
+        height: 300px;
+    }
+    
+    .philosophy-image img {
+        height: 350px;
+    }
+.apercu-pr{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding-left: 15px;
+}
+.image-cont>img{
+opacity: 1 !important; /* Force l'opacité à 100% */
+    filter: none !important; /* Désactive tous les filtres (luminosité, flou, etc.) */
+    visibility: visible !important; /* Force la visibilité */
+    transform: none !important;
+    padding-top: 2rem;
+    border-radius: 35px;
+}
+#disparait{
+    display: none;
+}
+
+}
+
+
+/* 1. On s'assure que l'icône est cachée sur PC */
+.mobile-menu-icon {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    /* 2. On affiche l'icône sur mobile */
+    .mobile-menu-icon {
+        display: block;
+        z-index: 1001;
+    }
+
+    /* 3. On prépare le menu pour qu'il apparaisse en dessous de la barre */
+    .navbar-menu {
+        display: none; /* Toujours caché par défaut */
+        flex-direction: column;
+        position: absolute;
+        top: 100%; /* Juste en dessous de la navbar */
+        left: 0;
+        width: 100%;
+        background: rgba(26, 26, 26, 0.98);
+        padding: 2rem 0;
+        text-align: center;
+        border-bottom: 1px solid var(--gold-primary);
+    }
+
+    .navbar-menu li {
+        margin: 1.5rem 0;
+    }
+
+    /* 4. LA MAGIE : Ce qui se passe quand JS ajoute la classe .active */
+    .navbar-menu.active {
+        display: flex; /* Le menu devient visible ! */
+    }
+}
+
+/* On force les boîtes à avoir une taille avant même que l'image arrive */
+.fabric-image, .tool-card, .salon-image {
+    width: 100%;
+    aspect-ratio: 3 / 4; /* Ou 16 / 9 selon tes préférences */
+    background-color: #222; /* Un gris sombre pour éviter le flash blanc */
+    overflow: hidden;
+}
+
+.fabric-image img, .tool-card img, .salon-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; }
