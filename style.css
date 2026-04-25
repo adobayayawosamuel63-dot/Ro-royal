@@ -830,6 +830,9 @@ video{
 }
 
 @media (max-width: 480px) {
+    .hero-subtitle{
+        font-size: 1rem;
+    }
     .hero-title {
         font-size: 2rem;
     }
