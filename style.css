@@ -830,6 +830,9 @@ video{
 }
 
 @media (max-width: 480px) {
+    *{
+        font-size: 10px;
+    }
     .hero-title {
         font-size: 2rem;
     }
@@ -842,9 +845,7 @@ video{
         font-size: 2rem;
     }
     
-    .hero-subtitle{
-        font-size: 1.3rem;
-    }
+
     .fabric-image img,
     .salon-image img {
         height: 300px;
